@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+    <style>
+        body{
+            height: 100%;
+        }
+
+        body *{
+            margin: 15px;
+        }
+
+        div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        body>button{
+            margin: auto;
+            display: block;
+        }
+
+        button{
+            color: whitesmoke;
+            background-color: rgb(73, 220, 156);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2 align="center">Counter App</h2>
+    <div>
+        <button class="add">Increment</button>
+        <p class="result"></p>
+        <button class="sub">Decrement</button>
+    
+    </div>
+    <button class="reset">reset</button>
+
+
+    <script>
+        let incrementbtn = document.querySelector(".add");
+        let decrementbtn = document.querySelector(".sub");
+        let resetbtn = document.querySelector(".reset");
+        let result = document.querySelector(".result");
+
+        (function defaultValue() {
+            result.innerText = 0;
+        })();
+
+        incrementbtn.addEventListener("click", () => {
+            result.innerText = Number(result.innerText) + 1;
+        });
+        decrementbtn.addEventListener("click", () => {
+            result.innerText = Number(result.innerText) - 1;
+        });
+        resetbtn.addEventListener("click", () => {
+            result.innerText = 0;
+        });
+    </script>
+</body>
+</html>

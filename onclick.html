@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onclick</title>
+    <style>
+        body{
+            height: 100%;
+        }
+
+        body *{
+            margin: 15px;
+        }
+
+        body>button{
+            margin: auto;
+            display: block;
+        }
+
+        button{
+            color: whitesmoke;
+            background-color: rgb(73, 220, 156);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2 align="center">Onclick</h2>
+    
+    <button class="btn">Click Me</button>
+
+
+    <script>
+        let btn = document.querySelector(".btn");
+
+        btn.addEventListener("click", () => {
+            alert("POV: You just clicked me!");
+        });
+        
+    </script>
+</body>
+</html>
